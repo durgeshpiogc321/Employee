@@ -93,6 +93,9 @@ namespace Services.Services
 
         public async Task<Responses<long>> SaveEmployee(EmployeeViewModel model)
         {
+
+
+            var aaaaa = "anc";
             model.ProfilePic = "" == null ? null : null;
             Employee employee = new Employee()
             {
