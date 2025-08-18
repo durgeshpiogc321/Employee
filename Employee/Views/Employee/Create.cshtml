@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewData["Title"] = "Add Employee";
+}
+
+
+<div class="row d-flex mb-2">
+    <div class="col-6 text-start">
+        <h5>Create Employee</h5>
+    </div>
+</div>
+
+<div class="list-box card">
+    <div class="card-body">
+        <form>
+            <div class="row">
+                <div class="col-md-6 col-12 mb-2">
+                    <label for="Name">Name</label>
+                    <input type="text" class="form-control" id="Name" placeholder="Name">
+                </div>
+                <div class="col-md-6 col-12 mb-2">
+                    <label for="Email">Email</label>
+                    <input type="email" class="form-control" id="Email" placeholder="Email">
+                </div>               
+            </div>           
+           
+            <div class="row">
+                <div class="form-group col-md-6  mb-2">
+                    <label for="PhoneNumber">Phone Number</label>
+                    <input type="text" class="form-control" id="PhoneNumber" placeholder="Phone Number">
+                </div>
+                <div class="form-group col-md-6  mb-2">
+                    <label for="Dob">Date of Birth</label>
+                    <input type="text" class="form-control datetime" id="Dob">
+                </div>
+               @* <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>*@                
+            </div>
+            <div class="form-group mb-2">
+                <label for="inputAddress2">Address</label>
+                <textarea type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"></textarea>
+            </div>
+
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="IsActive">
+                    <label class="form-check-label" for="IsActive">
+                        Active
+                    </label>
+                </div>
+            </div>
+            <button type="reset" class="btn btn-light border border-1 float-end">Clear</button>
+            <button type="submit" class="btn btn-primary float-end mx-4">Create</button>
+            
+        </form>
+    </div>
+</div>

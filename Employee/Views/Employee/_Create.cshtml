@@ -1,0 +1,54 @@
+﻿@model EmployeeViewModel
+
+<form id="frm-add-edit" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Id" value="@Model.Id" />
+    <input type="hidden" asp-for="ProfilePic" value="@Model.ProfilePic" />
+
+    <div class="row">
+        <div class="col-md-6 col-12 mb-2">
+            <label asp-for="Name">Name</label>
+            <input type="text" class="form-control" asp-for="Name" placeholder="Name">
+            <span asp-validation-for="Name" class="text-danger small"></span>
+        </div>
+        <div class="col-md-6 col-12 mb-2">
+            <label asp-for="Email">Email</label>
+            <input type="text" class="form-control" asp-for="Email" placeholder="Email">
+            <span asp-validation-for="Email" class="text-danger small"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6  mb-2">
+            <label asp-for="PhoneNumber">Phone Number</label>
+            <input type="text" class="form-control" asp-for="PhoneNumber" placeholder="Phone Number">
+            <span asp-validation-for="PhoneNumber" class="text-danger small"></span>
+        </div>
+        <div class="form-group col-md-6  mb-2">
+            <label asp-for="Dob">Date of Birth</label>
+            <input type="text" class="form-control datetime-picker" asp-for="Dob">
+            <span asp-validation-for="Dob" class="text-danger small"></span>
+        </div>
+    </div>
+    <div class="form-group mb-2">
+        <label asp-for="Address">Address</label>
+        <textarea type="text" class="form-control" asp-for="Address" placeholder="Apartment, studio, or floor"></textarea>
+        <span asp-validation-for="Address" class="text-danger small"></span>
+    </div>
+    <div class="form-group mb-4">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" asp-for="IsActive">
+            <label class="form-check-label" asp-for="IsActive">
+                Active
+            </label>
+            <span asp-validation-for="IsActive" class="text-danger small"></span>
+        </div>
+    </div>
+    <div class="form-group mb-4">
+        <label for="images" class="drop-container">            
+            <span class="drop-title"><img src="~/assets/images/upload-icon.png" /></span>
+            <input type="file" id="images" accept="image/*" style="display:none">
+        </label>
+        </div>
+    <button type="reset" class="btn btn-light border border-1 float-end" onclick="employee.ClearAddEditForm(this,event)">Clear</button>
+    <button id="btn-add-edit" type="button" class="btn btn-primary float-end mx-4" onclick="employee.AddEdit()">Create</button>
+</form>
+
