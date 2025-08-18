@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Employee Web App",
+			"type": "shell",
+			"command": "dotnet run --project \"d:/New folder/Employee/Employee.csproj\"",
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Run Employee Web App (quoted path)",
+			"type": "shell",
+			"command": "dotnet run --project \"d:\\New folder\\Employee\\Employee.csproj\"",
+			"isBackground": false,
+			"group": "build"
+		}
+	]
+}
