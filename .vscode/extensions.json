@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "ms-vscode.csharp",
+        "github.copilot",
+        "github.copilot-chat",
+        "ms-dotnettools.csharp",
+        "ms-vscode.vscode-json"
+    ],
+    "unwantedRecommendations": []
+}

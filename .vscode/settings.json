@@ -11,18 +11,28 @@
         "length": 1000,
         "temperature": 0.1
     },
+    // Terminal tools and automation settings for Code Reviewer
+    "github.copilot.chat.experimental.terminalTools": true,
+    "github.copilot.chat.terminalTools.enabled": true,
+    "github.copilot.terminalChatLocation": "terminal",
     // Terminal and command execution settings
     "terminal.integrated.allowChords": true,
     "terminal.integrated.allowMnemonics": true,
     "terminal.integrated.commandsToSkipShell": [
         "workbench.action.togglePanel"
     ],
+    // Enable automation tools for chatmodes
+    "workbench.experimental.chatModes": true,
+    "github.copilot.chat.runInTerminal.enabled": true,
     // Code quality and formatting settings for Employee project
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
         "source.fixAll": "explicit",
         "source.organizeImports": "explicit"
     },
+    // Enable AI assistant terminal automation
+    "github.copilot.experimental.terminal": true,
+    "github.copilot.chat.experimental.codeGeneration": true,
     // C# specific settings for Employee project
     "csharp.format.enable": true,
     "csharp.semanticHighlighting.enabled": true,
