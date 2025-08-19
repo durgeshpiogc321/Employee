@@ -1,0 +1,65 @@
+{
+    // GitHub Copilot and AI Assistant Settings
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false
+    },
+    // Enable terminal command execution for Code Reviewer
+    "github.copilot.advanced": {
+        "length": 1000,
+        "temperature": 0.1
+    },
+    // Terminal and command execution settings
+    "terminal.integrated.allowChords": true,
+    "terminal.integrated.allowMnemonics": true,
+    "terminal.integrated.commandsToSkipShell": [
+        "workbench.action.togglePanel"
+    ],
+    // Code quality and formatting settings for Employee project
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    // C# specific settings for Employee project
+    "csharp.format.enable": true,
+    "csharp.semanticHighlighting.enabled": true,
+    "omnisharp.enableEditorConfigSupport": true,
+    "omnisharp.enableRoslynAnalyzers": true,
+    // Employee project specific settings
+    "files.exclude": {
+        "**/bin": true,
+        "**/obj": true,
+        "**/.vs": true
+    },
+    // Git and source control settings
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    // Code Review and Security settings
+    "security.workspace.trust.untrustedFiles": "open",
+    "security.workspace.trust.banner": "always",
+    // Enable IntelliSense and code completion
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    // Employee project coding standards
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": true,
+    // Enable Code Actions and Quick Fixes
+    "editor.lightbulb.enabled": "on",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+    // Code Review automation settings
+    "workbench.editorAssociations": {
+        "*.md": "default"
+    },
+    // Enable advanced diagnostics for better code quality
+    "problems.decorations.enabled": true,
+    "problems.showCurrentInStatus": true
+}
