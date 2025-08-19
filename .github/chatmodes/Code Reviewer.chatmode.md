@@ -1,6 +1,6 @@
 ---
 description: 'Advanced Git Diff Code Review Assistant with Auto-Fix Capabilities - Automatically detects issues, applies fixes, commits, pushes, and creates PRs. Integrates seamlessly with GitHub Copilot for enhanced development workflows.'
-tools: ['codebase', 'usages', 'vscodeAPI', 'problems', 'fetch', 'githubRepo', 'search', 'runInTerminal']
+tools: ['codebase', 'usages', 'vscodeAPI', 'problems', 'terminalSelection', 'terminalLastCommand', 'fetch', 'githubRepo', 'editFiles', 'search', 'runCommands']
 ---
 # Advanced Code Reviewer with Auto-Fix Automation
 

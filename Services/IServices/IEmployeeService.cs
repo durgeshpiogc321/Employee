@@ -9,7 +9,7 @@ namespace Services.IServices
         Task<List<GetAllEmployeeDto>> GetAllEmployee(EmployeeRequestModel model);
         Task<List<GetAllEmployeeDto>> GetAllEmployee_V1(EmployeeRequestModel model);
         Task<EmployeeViewModel> GetEmployee(long id);
-        Task<Responses<long>> SaveEmployee(EmployeeViewModel model); 
+        Task<Responses<long>> SaveEmployee(EmployeeViewModel model);
         Task<Responses<bool>> DeleteEmployee(long id);
         Task<Responses<bool>> ActiveEmployee(long id);
         Task<bool> IsEmailExist(string email, long id);
