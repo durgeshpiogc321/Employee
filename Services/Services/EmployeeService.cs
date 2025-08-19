@@ -12,9 +12,6 @@ namespace Services.Services
     {
         private readonly IEmployeeRepository employeeRepository;
         private readonly IMapper _mapper;
-        private readonly IMapper _mapper1;
-
-        string aaa = "sdcbc";
 
         public EmployeeService(IEmployeeRepository employeeRepository, IMapper mapper)
         {

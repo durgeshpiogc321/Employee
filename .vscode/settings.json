@@ -1,38 +1,39 @@
 {
-    // GitHub Copilot and AI Assistant Settings
+    // GitHub Copilot and Enhanced Code Reviewer Settings
     "github.copilot.enable": {
         "*": true,
         "plaintext": true,
         "markdown": true,
         "scminput": false
     },
-    // Enable terminal command execution for Code Reviewer
+    // Enhanced Code Reviewer Integration
     "github.copilot.advanced": {
-        "length": 1000,
+        "length": 1500,
         "temperature": 0.1
     },
-    // Terminal tools and automation settings for Code Reviewer
+    // Auto-Fix and Terminal Automation
+    "github.copilot.chat.allowTerminalTools": true,
+    "github.copilot.chat.terminalExecution": "enabled",
+    "security.allowedUNCHosts": [
+        "*"
+    ],
+    "terminal.integrated.allowChords": true,
     "github.copilot.chat.experimental.terminalTools": true,
     "github.copilot.chat.terminalTools.enabled": true,
     "github.copilot.terminalChatLocation": "terminal",
-    // Terminal and command execution settings
-    "terminal.integrated.allowChords": true,
-    "terminal.integrated.allowMnemonics": true,
-    "terminal.integrated.commandsToSkipShell": [
-        "workbench.action.togglePanel"
-    ],
-    // Enable automation tools for chatmodes
-    "workbench.experimental.chatModes": true,
     "github.copilot.chat.runInTerminal.enabled": true,
+    "github.copilot.experimental.terminal": true,
+    "github.copilot.chat.experimental.codeGeneration": true,
+    // Enhanced chatmode capabilities
+    "workbench.experimental.chatModes": true,
+    "github.copilot.chat.experimental.autoFix": true,
+    "github.copilot.chat.experimental.intelligentReviews": true,
     // Code quality and formatting settings for Employee project
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
         "source.fixAll": "explicit",
         "source.organizeImports": "explicit"
     },
-    // Enable AI assistant terminal automation
-    "github.copilot.experimental.terminal": true,
-    "github.copilot.chat.experimental.codeGeneration": true,
     // C# specific settings for Employee project
     "csharp.format.enable": true,
     "csharp.semanticHighlighting.enabled": true,
