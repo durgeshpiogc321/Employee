@@ -81,26 +81,26 @@ namespace Services.Services
                 // Input validation
                 if (model == null)
                 {
-                    return new Responses<long>(data: 0, statusCode: HttpStatusCode.BadRequest, 
+                    return new Responses<long>(data: 0, statusCode: HttpStatusCode.BadRequest,
                                              message: "Employee data is required");
                 }
 
                 if (string.IsNullOrWhiteSpace(model.Email))
                 {
-                    return new Responses<long>(data: 0, statusCode: HttpStatusCode.BadRequest, 
+                    return new Responses<long>(data: 0, statusCode: HttpStatusCode.BadRequest,
                                              message: "Email is required");
                 }
 
                 if (string.IsNullOrWhiteSpace(model.Name))
                 {
-                    return new Responses<long>(data: 0, statusCode: HttpStatusCode.BadRequest, 
+                    return new Responses<long>(data: 0, statusCode: HttpStatusCode.BadRequest,
                                              message: "Name is required");
                 }
 
                 // Validate business rules
                 if (await IsEmailExist(model.Email, model.Id))
                 {
-                    return new Responses<long>(data: 0, statusCode: HttpStatusCode.BadRequest, 
+                    return new Responses<long>(data: 0, statusCode: HttpStatusCode.BadRequest,
                                              message: "Email already exists");
                 }
 
@@ -120,19 +120,19 @@ namespace Services.Services
 
                 if (model.Id == 0)
                 {
-                    return new Responses<long>(data: result, statusCode: HttpStatusCode.Created, 
+                    return new Responses<long>(data: result, statusCode: HttpStatusCode.Created,
                                              message: "Employee created successfully");
                 }
                 else
                 {
-                    return new Responses<long>(data: result, statusCode: HttpStatusCode.OK, 
+                    return new Responses<long>(data: result, statusCode: HttpStatusCode.OK,
                                              message: "Employee updated successfully");
                 }
             }
             catch (Exception)
             {
                 // Log exception
-                return new Responses<long>(data: 0, statusCode: HttpStatusCode.InternalServerError, 
+                return new Responses<long>(data: 0, statusCode: HttpStatusCode.InternalServerError,
                                          message: "An error occurred while saving employee");
             }
         }
@@ -144,25 +144,25 @@ namespace Services.Services
                 // Input validation
                 if (id <= 0)
                 {
-                    return new Responses<bool>(data: false, statusCode: HttpStatusCode.BadRequest, 
+                    return new Responses<bool>(data: false, statusCode: HttpStatusCode.BadRequest,
                                              message: "Invalid employee ID");
                 }
 
                 var result = await employeeRepository.DeleteEmployee(id);
                 if (result)
                 {
-                    return new Responses<bool>(data: result, statusCode: HttpStatusCode.OK, 
+                    return new Responses<bool>(data: result, statusCode: HttpStatusCode.OK,
                                              message: "Employee has been deleted successfully");
                 }
                 else
                 {
-                    return new Responses<bool>(data: result, statusCode: HttpStatusCode.BadRequest, 
+                    return new Responses<bool>(data: result, statusCode: HttpStatusCode.BadRequest,
                                              message: "Failed to delete employee");
                 }
             }
             catch (Exception)
             {
-                return new Responses<bool>(data: false, statusCode: HttpStatusCode.InternalServerError, 
+                return new Responses<bool>(data: false, statusCode: HttpStatusCode.InternalServerError,
                                          message: "An error occurred while deleting employee");
             }
         }
@@ -174,7 +174,7 @@ namespace Services.Services
                 // Input validation
                 if (id <= 0)
                 {
-                    return new Responses<bool>(data: false, statusCode: HttpStatusCode.BadRequest, 
+                    return new Responses<bool>(data: false, statusCode: HttpStatusCode.BadRequest,
                                              message: "Invalid employee ID");
                 }
 
@@ -182,18 +182,18 @@ namespace Services.Services
                 if (status != null)
                 {
                     string message = status ?? false ? "de-activated" : "activated";
-                    return new Responses<bool>(data: status ?? false, statusCode: HttpStatusCode.OK, 
+                    return new Responses<bool>(data: status ?? false, statusCode: HttpStatusCode.OK,
                                              message: "Employee has been " + message + " successfully");
                 }
                 else
                 {
-                    return new Responses<bool>(data: false, statusCode: HttpStatusCode.BadRequest, 
+                    return new Responses<bool>(data: false, statusCode: HttpStatusCode.BadRequest,
                                              message: "Failed to update employee status");
                 }
             }
             catch (Exception)
             {
-                return new Responses<bool>(data: false, statusCode: HttpStatusCode.InternalServerError, 
+                return new Responses<bool>(data: false, statusCode: HttpStatusCode.InternalServerError,
                                          message: "An error occurred while updating employee status");
             }
         }
