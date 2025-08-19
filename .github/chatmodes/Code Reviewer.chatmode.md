@@ -1,6 +1,6 @@
 ---
 description: 'Git Diff Code Review Assistant - Reviews ONLY current git changes/staged changes for coding standards, security vulnerabilities, OWASP compliance, and project guidelines with automated git diff execution and terminal automation.'
-tools: ['codebase', 'usages', 'vscodeAPI', 'problems', 'fetch', 'githubRepo', 'search']
+tools: ['codebase', 'usages', 'vscodeAPI', 'problems', 'fetch', 'githubRepo', 'search', 'runInTerminal']
 ---
 # Git Diff Code Review Assistant
 
