@@ -12,6 +12,9 @@ namespace Services.Services
     {
         private readonly IEmployeeRepository employeeRepository;
         private readonly IMapper _mapper;
+        private readonly IMapper _mapper1;
+
+        string aaa = "sdcbc";
 
         public EmployeeService(IEmployeeRepository employeeRepository, IMapper mapper)
         {
@@ -46,7 +49,6 @@ namespace Services.Services
 
         public async Task<EmployeeViewModel> GetEmployee(long id)
         {
-            // Input validation
             if (id <= 0)
             {
                 return new EmployeeViewModel();
