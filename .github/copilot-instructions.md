@@ -255,6 +255,38 @@ public class EmployeeService : IEmployeeService
 - **Use descriptive branch names**: `feature/employee-validation`, `bugfix/date-parsing`, `refactor/service-cleanup`
 - **Keep branches focused** on a single feature or fix
 
+### Automated Git Diff Review Process
+
+#### **Using Custom Code Reviewer Agent**
+The project includes a specialized Git Diff Code Review Assistant that can automatically run git diff commands and provide comprehensive analysis:
+
+```bash
+# The reviewer agent can execute these commands automatically:
+git status                    # Check file status
+git diff                      # View all unstaged changes
+git diff --staged             # View staged changes
+git diff <filepath>           # View specific file changes
+git diff main..dev            # Compare branches
+git diff --stat               # View change statistics
+git add <filepath>            # Stage specific files
+git add .                     # Stage all changes
+git commit -m "message"       # Commit with message
+git push origin <branch>      # Push to remote
+gh pr create                  # Create pull request
+```
+
+#### **Automated Review Capabilities**
+- **Security Analysis**: OWASP compliance checking on changed code
+- **Standards Validation**: Project coding standards enforcement
+- **Architecture Review**: Clean architecture principle adherence
+- **Performance Assessment**: Code efficiency evaluation
+- **Git Workflow Validation**: Proper staging and commit practices
+- **Automated Staging**: Stage approved changes automatically
+- **Commit Generation**: Create descriptive commit messages
+- **Push Operations**: Push changes to remote repositories
+- **PR Creation**: Generate and create pull requests
+- **Workflow Automation**: Complete git workflows from review to PR
+
 ### Staging and Committing Changes
 
 1. **Check status before staging**:
@@ -262,7 +294,7 @@ public class EmployeeService : IEmployeeService
    git status
    ```
 
-2. **Review changes before staging**:
+2. **Review changes before staging** (Can be automated via Code Reviewer Agent):
    ```bash
    # View all unstaged changes
    git diff
