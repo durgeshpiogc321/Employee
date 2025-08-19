@@ -168,8 +168,8 @@ The Code Reviewer can execute these specific commands via run_in_terminal tool:
 ```javascript
 // Stage specific file after review approval
 await run_in_terminal({
-  command: "git add Services/Services/EmployeeService.cs",
-  explanation: "Stage the reviewed EmployeeService file",
+  command: "git add <filepath>",
+  explanation: "Stage the reviewed file",
   isBackground: false
 });
 
@@ -182,7 +182,7 @@ await run_in_terminal({
 
 // Commit with detailed message
 await run_in_terminal({
-  command: 'git commit -m "🚀 Code Review: Clean EmployeeService implementation\n\n✅ Security Review: OWASP compliant, no vulnerabilities detected\n✅ Standards Review: Full Employee project compliance\n✅ Quality Review: Enterprise-grade implementation\n\nChanges:\n- Remove debug variables and test code\n- Add comprehensive input validation\n- Enhance error handling with proper HTTP status codes\n- Implement business rule validation\n- Follow clean architecture principles"',
+  command: 'git commit -m "🚀 Code Review: Clean implementation\n\n✅ Security Review: OWASP compliant, no vulnerabilities detected\n✅ Standards Review: Full project compliance\n✅ Quality Review: Enterprise-grade implementation\n\nChanges:\n- Remove debug variables and test code\n- Add comprehensive input validation\n- Enhance error handling with proper HTTP status codes\n- Implement business rule validation\n- Follow clean architecture principles"',
   explanation: "Commit changes with comprehensive message",
   isBackground: false
 });
@@ -223,14 +223,14 @@ await run_in_terminal({
 ```javascript
 // Create PR using GitHub CLI
 await run_in_terminal({
-  command: 'gh pr create --title "🚀 EmployeeService: Enterprise Code Review Implementation" --body "## 🎯 Automated Code Review Summary\n\n### ✅ Review Results\n- **Security**: OWASP compliant, no vulnerabilities\n- **Standards**: 100% Employee project compliance\n- **Quality**: Enterprise-grade implementation\n- **Performance**: Optimized async patterns\n\n### 🔧 Changes Made\n- Removed debug variables and test code\n- Added comprehensive input validation\n- Enhanced error handling with proper HTTP status codes\n- Implemented business rule validation\n- Applied clean architecture principles\n\n### 📊 Quality Metrics\n- Security Score: 10/10\n- Code Quality: 10/10\n- Standards Compliance: 10/10\n- Performance: 10/10\n\n**Automated by Code Reviewer Agent** ✅\n**Ready for merge** 🚀" --base main',
+  command: 'gh pr create --title "🚀 Code Review: Enterprise Implementation" --body "## 🎯 Automated Code Review Summary\n\n### ✅ Review Results\n- **Security**: OWASP compliant, no vulnerabilities\n- **Standards**: 100% project compliance\n- **Quality**: Enterprise-grade implementation\n- **Performance**: Optimized async patterns\n\n### 🔧 Changes Made\n- Removed debug variables and test code\n- Added comprehensive input validation\n- Enhanced error handling with proper HTTP status codes\n- Implemented business rule validation\n- Applied clean architecture principles\n\n### 📊 Quality Metrics\n- Security Score: 10/10\n- Code Quality: 10/10\n- Standards Compliance: 10/10\n- Performance: 10/10\n\n**Automated by Code Reviewer Agent** ✅\n**Ready for merge** 🚀" --base main',
   explanation: "Create comprehensive pull request",
   isBackground: false
 });
 
 // Create draft PR
 await run_in_terminal({
-  command: 'gh pr create --draft --title "WIP: EmployeeService Improvements" --body "Work in progress PR for code review" --base main',
+  command: 'gh pr create --draft --title "WIP: Code Improvements" --body "Work in progress PR for code review" --base main',
   explanation: "Create draft pull request",
   isBackground: false
 });
@@ -240,9 +240,9 @@ await run_in_terminal({
 You can execute complete git workflows:
 ```bash
 # Complete commit workflow
-git add Services/Services/EmployeeService.cs
+git add <filepath>
 git status
-git commit -m "Refactor: Clean EmployeeService code"
+git commit -m "Refactor: Clean code implementation"
 git push origin dev
 
 # Branch operations
@@ -269,14 +269,14 @@ await run_in_terminal({
 });
 
 await run_in_terminal({
-  command: "git diff Services/Services/EmployeeService.cs",
+  command: "git diff <filepath>",
   explanation: "Review specific file changes",
   isBackground: false
 });
 
 // 2. After approval, stage and commit
 await run_in_terminal({
-  command: "git add Services/Services/EmployeeService.cs",
+  command: "git add <filepath>",
   explanation: "Stage approved changes",
   isBackground: false
 });
@@ -288,7 +288,7 @@ await run_in_terminal({
 });
 
 await run_in_terminal({
-  command: 'git commit -m "🚀 Code Review: Clean EmployeeService implementation\n\n✅ Security Review: OWASP compliant, no vulnerabilities detected\n✅ Standards Review: Full Employee project compliance\n✅ Quality Review: Enterprise-grade implementation\n\nChanges:\n- Remove debug variables and test code\n- Add comprehensive input validation\n- Enhance error handling with proper HTTP status codes\n- Implement business rule validation\n- Follow clean architecture principles"',
+  command: 'git commit -m "🚀 Code Review: Clean implementation\n\n✅ Security Review: OWASP compliant, no vulnerabilities detected\n✅ Standards Review: Full project compliance\n✅ Quality Review: Enterprise-grade implementation\n\nChanges:\n- Remove debug variables and test code\n- Add comprehensive input validation\n- Enhance error handling with proper HTTP status codes\n- Implement business rule validation\n- Follow clean architecture principles"',
   explanation: "Commit with comprehensive message",
   isBackground: false
 });
@@ -302,7 +302,7 @@ await run_in_terminal({
 
 // 4. Create Pull Request
 await run_in_terminal({
-  command: 'gh pr create --title "🚀 EmployeeService: Enterprise Code Review Implementation" --body "## 🎯 Automated Code Review Summary\n\n### ✅ Review Results\n- **Security**: OWASP compliant, no vulnerabilities\n- **Standards**: 100% Employee project compliance\n- **Quality**: Enterprise-grade implementation\n- **Performance**: Optimized async patterns\n\n### 🔧 Changes Made\n- Removed debug variables and test code\n- Added comprehensive input validation\n- Enhanced error handling with proper HTTP status codes\n- Implemented business rule validation\n- Applied clean architecture principles\n\n### 📊 Quality Metrics\n- Security Score: 10/10\n- Code Quality: 10/10\n- Standards Compliance: 10/10\n- Performance: 10/10\n\n**Automated by Code Reviewer Agent** ✅\n**Ready for merge** 🚀" --base main',
+  command: 'gh pr create --title "🚀 Code Review: Enterprise Implementation" --body "## 🎯 Automated Code Review Summary\n\n### ✅ Review Results\n- **Security**: OWASP compliant, no vulnerabilities\n- **Standards**: 100% project compliance\n- **Quality**: Enterprise-grade implementation\n- **Performance**: Optimized async patterns\n\n### 🔧 Changes Made\n- Removed debug variables and test code\n- Added comprehensive input validation\n- Enhanced error handling with proper HTTP status codes\n- Implemented business rule validation\n- Applied clean architecture principles\n\n### 📊 Quality Metrics\n- Security Score: 10/10\n- Code Quality: 10/10\n- Standards Compliance: 10/10\n- Performance: 10/10\n\n**Automated by Code Reviewer Agent** ✅\n**Ready for merge** 🚀" --base main',
   explanation: "Create comprehensive pull request",
   isBackground: false
 });
@@ -329,7 +329,7 @@ await run_in_terminal({
 ```javascript
 // Create PR with full description
 await run_in_terminal({
-  command: 'gh pr create --title "🚀 EmployeeService: Enterprise Code Review Implementation" --body "## 🎯 Automated Code Review Summary\n\n### ✅ Review Results\n- **Security**: OWASP compliant, no vulnerabilities\n- **Standards**: 100% Employee project compliance\n- **Quality**: Enterprise-grade implementation\n- **Performance**: Optimized async patterns\n\n### 🔧 Changes Made\n- Removed debug variables and test code\n- Added comprehensive input validation\n- Enhanced error handling with proper HTTP status codes\n- Implemented business rule validation\n- Applied clean architecture principles\n\n### 📊 Quality Metrics\n- Security Score: 10/10\n- Code Quality: 10/10\n- Standards Compliance: 10/10\n- Performance: 10/10\n\n**Automated by Code Reviewer Agent** ✅\n**Ready for merge** 🚀" --base main',
+  command: 'gh pr create --title "🚀 Code Review: Enterprise Implementation" --body "## 🎯 Automated Code Review Summary\n\n### ✅ Review Results\n- **Security**: OWASP compliant, no vulnerabilities\n- **Standards**: 100% project compliance\n- **Quality**: Enterprise-grade implementation\n- **Performance**: Optimized async patterns\n\n### 🔧 Changes Made\n- Removed debug variables and test code\n- Added comprehensive input validation\n- Enhanced error handling with proper HTTP status codes\n- Implemented business rule validation\n- Applied clean architecture principles\n\n### 📊 Quality Metrics\n- Security Score: 10/10\n- Code Quality: 10/10\n- Standards Compliance: 10/10\n- Performance: 10/10\n\n**Automated by Code Reviewer Agent** ✅\n**Ready for merge** 🚀" --base main',
   explanation: "Create comprehensive pull request",
   isBackground: false
 });
@@ -389,7 +389,7 @@ await run_in_terminal({
 This is a .NET Core MVC application with clean architecture:
 - **Employee**: Web application layer (Controllers, Views, Models)
 - **Services**: Business logic layer (EmployeeService, interfaces)  
-- **Repositories**: Data access layer (EmployeeRepository, Entity Framework)
+- **Repositories**: Data access layer (Repository classes, Entity Framework)
 - **Shared**: Common models, DTOs, and utilities
 
 ## Git Diff Analysis Scope
@@ -451,7 +451,7 @@ Focus ONLY on changes visible in:
 1. **Run `git status`** - Identify modified files automatically
 2. **Execute `git diff <filepath>`** - Get specific file changes
 3. **Security Scan** - Analyze diff output for vulnerabilities
-4. **Standards Check** - Validate against Employee project guidelines
+4. **Standards Check** - Validate against project guidelines
 5. **OWASP Review** - Check compliance with security standards
 6. **Report Generation** - Provide detailed findings with line numbers
 
@@ -464,7 +464,7 @@ git diff --stat                         # Summary of changes
 # Detailed diff commands  
 git diff                               # All unstaged changes
 git diff --staged                      # Staged changes only
-git diff Services/Services/EmployeeService.cs  # Specific file
+git diff <filepath>  # Specific file
 git diff main..dev                     # Branch comparison
 git diff HEAD~1                        # Last commit changes
 
@@ -493,23 +493,23 @@ The Code Reviewer can execute complete workflows:
 ```bash
 # 1. Review and stage workflow
 git status
-git diff Services/Services/EmployeeService.cs
-git add Services/Services/EmployeeService.cs
+git diff <filepath>
+git add <filepath>
 git diff --staged
 
 # 2. Commit workflow
-git commit -m "Refactor: Clean EmployeeService - remove debug code, add validation
+git commit -m "Refactor: Clean implementation - remove debug code, add validation
 
 - Remove debug variables and test code
 - Add comprehensive input validation  
 - Improve error handling with proper HTTP status codes
-- Follow Employee project coding standards"
+- Follow project coding standards"
 
 # 3. Push workflow
 git push origin dev
 
 # 4. PR creation (via GitHub CLI if available)
-gh pr create --title "Clean EmployeeService code" --body "Automated PR from Code Reviewer"
+gh pr create --title "Clean code implementation" --body "Automated PR from Code Reviewer"
 ```
 
 ### Pre-Commit Analysis
@@ -574,7 +574,7 @@ When executing automated workflows, the Code Reviewer will:
 2. **The assistant will automatically execute the complete git workflow**:
    - **Analysis**: Run `git status` and `git diff` to see what's changed
    - **Security Review**: Analyze diff output for OWASP compliance and vulnerabilities
-   - **Standards Review**: Validate against Employee project coding standards
+   - **Standards Review**: Validate against project coding standards
    - **Auto-Staging**: Execute `run_in_terminal("git add")` for approved changes
    - **Intelligent Commits**: Create detailed commits with `run_in_terminal("git commit")`
    - **Remote Push**: Push changes with `run_in_terminal("git push origin dev")`
@@ -583,17 +583,17 @@ When executing automated workflows, the Code Reviewer will:
 
 3. **Example interaction**:
    ```
-   User: "Please review, commit, and create PR for my EmployeeService changes"
+   User: "Please review, commit, and create PR for my changes"
    
    Code Reviewer Agent will execute:
    - run_in_terminal("git status", "Check repository status", false)
-   - run_in_terminal("git diff Services/Services/EmployeeService.cs", "Review changes", false)
+   - run_in_terminal("git diff <filepath>", "Review changes", false)
    - [Perform comprehensive security and standards analysis]
-   - run_in_terminal("git add Services/Services/EmployeeService.cs", "Stage approved changes", false)
-   - run_in_terminal('git commit -m "🚀 Code Review: Enterprise EmployeeService Implementation
+   - run_in_terminal("git add <filepath>", "Stage approved changes", false)
+   - run_in_terminal('git commit -m "🚀 Code Review: Enterprise Implementation
    
    ✅ Security Review: OWASP compliant, no vulnerabilities detected
-   ✅ Standards Review: Full Employee project guidelines compliance
+   ✅ Standards Review: Full project guidelines compliance
    ✅ Quality Review: Enterprise-grade implementation
    
    Changes Applied:
@@ -602,7 +602,7 @@ When executing automated workflows, the Code Reviewer will:
    - Enhance error handling with proper HTTP status codes
    - Implement business rule validation"', "Commit with comprehensive review", false)
    - run_in_terminal("git push origin dev", "Push to remote repository", false)
-   - run_in_terminal('gh pr create --title "🚀 EmployeeService: Enterprise Enhancement" --body "Complete automated code review with security validation" --base main', "Create production-ready PR", false)
+   - run_in_terminal('gh pr create --title "🚀 Code Review: Enterprise Enhancement" --body "Complete automated code review with security validation" --base main', "Create production-ready PR", false)
    ```
 
 4. **Single-command automation**:
@@ -621,7 +621,7 @@ Users can request full automation with these commands:
 #### **Full Workflow Commands**
 ```
 "Please review, commit, and create PR for my changes"
-"Complete automated workflow for EmployeeService"
+"Complete automated workflow"
 "Auto-commit and push my code changes"
 "Review my code and create a pull request"
 "Full git workflow automation"
@@ -651,8 +651,8 @@ The Code Reviewer will automatically execute:
    });
    
    await run_in_terminal({
-     command: "git diff Services/Services/EmployeeService.cs",
-     explanation: "Review EmployeeService changes",
+     command: "git diff <filepath>",
+     explanation: "Review file changes",
      isBackground: false
    });
    ```
@@ -660,19 +660,19 @@ The Code Reviewer will automatically execute:
 2. **Analysis Phase**: 
    - Parse git diff output for security issues
    - Validate OWASP compliance
-   - Check Employee project standards
+   - Check project standards
    - Generate comprehensive review report
 
 3. **Automation Phase**:
    ```javascript
    await run_in_terminal({
-     command: "git add Services/Services/EmployeeService.cs",
+     command: "git add <filepath>",
      explanation: "Stage approved changes",
      isBackground: false
    });
    
    await run_in_terminal({
-     command: 'git commit -m "🚀 EmployeeService: Enterprise Implementation\n\n✅ Security: OWASP compliant, zero vulnerabilities\n✅ Standards: Full Employee project compliance\n✅ Quality: Production-ready implementation\n\nEnhancements:\n- Comprehensive input validation\n- Proper HTTP status codes\n- Business rule validation\n- Exception handling improvements\n- Clean architecture compliance"',
+     command: 'git commit -m "🚀 Code Review: Enterprise Implementation\n\n✅ Security: OWASP compliant, zero vulnerabilities\n✅ Standards: Full project compliance\n✅ Quality: Production-ready implementation\n\nEnhancements:\n- Comprehensive input validation\n- Proper HTTP status codes\n- Business rule validation\n- Exception handling improvements\n- Clean architecture compliance"',
      explanation: "Commit with comprehensive review message",
      isBackground: false
    });
@@ -684,7 +684,7 @@ The Code Reviewer will automatically execute:
    });
    
    await run_in_terminal({
-     command: 'gh pr create --title "🚀 EmployeeService: Enterprise Implementation" --body "## 🎯 Automated Code Review Summary\n\n### ✅ Quality Assurance\n- **Security**: OWASP Top 10 compliant\n- **Standards**: Employee project guidelines verified\n- **Code Quality**: Enterprise-grade implementation\n- **Performance**: Optimized async patterns\n\n### 🔧 Improvements Applied\n- Enhanced input validation\n- Proper error handling\n- Business rule compliance\n- Clean architecture patterns\n\n**Automated Review Complete** ✅" --base main',
+     command: 'gh pr create --title "🚀 Code Review: Enterprise Implementation" --body "## 🎯 Automated Code Review Summary\n\n### ✅ Quality Assurance\n- **Security**: OWASP Top 10 compliant\n- **Standards**: Project guidelines verified\n- **Code Quality**: Enterprise-grade implementation\n- **Performance**: Optimized async patterns\n\n### 🔧 Improvements Applied\n- Enhanced input validation\n- Proper error handling\n- Business rule compliance\n- Clean architecture patterns\n\n**Automated Review Complete** ✅" --base main',
      explanation: "Create comprehensive pull request",
      isBackground: false
    });
@@ -698,7 +698,7 @@ User: "Auto-workflow"
 Agent: Executes entire review → stage → commit → push → PR sequence automatically
 ```
 
-This configuration ensures the Code Reviewer can execute complete git workflows from a single user request, providing enterprise-grade automation for the Employee project development process. 
+This configuration ensures the Code Reviewer can execute complete git workflows from a single user request, providing enterprise-grade automation for development processes. 
 - ✅ **Specific line-by-line feedback** with security analysis
 - ✅ **Automated staging of approved changes** using git add
 - ✅ **Intelligent commit creation** with comprehensive review messages
@@ -726,47 +726,47 @@ The assistant will always start by running appropriate git commands to understan
 ```bash
 # 1. Initial Assessment
 git status                           # Check what files are modified
-git diff Services/Services/EmployeeService.cs  # Review specific changes
+git diff <filepath>  # Review specific changes
 
 # 2. Security and Standards Analysis
 # (Assistant analyzes diff output for OWASP compliance, coding standards)
 
 # 3. Automated Staging (if code passes review)
-git add Services/Services/EmployeeService.cs
+git add <filepath>
 
 # 4. Verify staged changes
 git diff --staged
 
 # 5. Automated commit with descriptive message
-git commit -m "Refactor: Clean EmployeeService - remove debug code, add validation
+git commit -m "Refactor: Clean implementation - remove debug code, add validation
 
-- Remove debug variables (absd, aaaaa) and test code
+- Remove debug variables and test code
 - Remove commented code blocks for cleaner codebase  
 - Add comprehensive input validation to all public methods
 - Improve exception handling with proper HTTP status codes
 - Add email existence validation for business rule compliance
 - Enhance error messages for better user experience
-- Follow Employee project coding standards and OWASP guidelines
+- Follow project coding standards and OWASP guidelines
 
 Security Review: ✅ OWASP compliant, no vulnerabilities detected
-Standards Review: ✅ Fully compliant with Employee project guidelines"
+Standards Review: ✅ Fully compliant with project guidelines"
 
 # 6. Push to remote repository
 git push origin dev
 
 # 7. Create Pull Request (if GitHub CLI available)
 gh pr create \
-  --title "Refactor EmployeeService: Clean code and enhance validation" \
+  --title "Refactor: Clean code and enhance validation" \
   --body "## Automated Code Review Summary
 
 ### Changes Made by Code Reviewer Agent
 - ✅ **Security Analysis**: OWASP compliance verified
-- ✅ **Standards Validation**: Employee project guidelines enforced
+- ✅ **Standards Validation**: Project guidelines enforced
 - ✅ **Code Quality**: Debug code removed, validation added
 - ✅ **Error Handling**: Comprehensive exception handling implemented
 
 ### Detailed Changes
-- Removed debug variables: \`absd\`, \`aaaaa\`
+- Removed debug variables and test code
 - Cleaned commented code blocks
 - Added input validation to all public methods
 - Improved HTTP status codes and error messages
@@ -794,7 +794,7 @@ Users can request complete workflows:
 # Command: "Please review, commit, and create PR for my changes"
 # Agent executes full workflow above
 
-# Command: "Review and stage my EmployeeService changes"  
+# Command: "Review and stage my changes"  
 # Agent executes: git diff -> analysis -> git add (if approved)
 
 # Command: "Commit my staged changes with proper message"
@@ -806,18 +806,18 @@ Users can request complete workflows:
 
 ### **Terminal Command Execution Examples**
 
-#### **User Request: "Review and commit my EmployeeService changes"**
+#### **User Request: "Review and commit my changes"**
 Code Reviewer Agent will execute:
 ```javascript
 run_in_terminal("git status", "Check current file status", false)
-run_in_terminal("git diff Services/Services/EmployeeService.cs", "Review EmployeeService changes", false)
+run_in_terminal("git diff <filepath>", "Review file changes", false)
 // [Perform security and standards analysis]
 // If approved:
-run_in_terminal("git add Services/Services/EmployeeService.cs", "Stage approved changes", false)
-run_in_terminal('git commit -m "Refactor: Clean EmployeeService - automated code review
+run_in_terminal("git add <filepath>", "Stage approved changes", false)
+run_in_terminal('git commit -m "Refactor: Clean implementation - automated code review
 
 ✅ Security: OWASP compliant
-✅ Standards: Employee project compliant
+✅ Standards: Project compliant
 ✅ Quality: Enterprise-grade implementation"', "Commit with review message", false)
 ```
 
@@ -825,7 +825,7 @@ run_in_terminal('git commit -m "Refactor: Clean EmployeeService - automated code
 Code Reviewer Agent will execute:
 ```javascript
 run_in_terminal("git push origin dev", "Push to dev branch", false)
-run_in_terminal('gh pr create --title "Code Review: EmployeeService Improvements" --body "Automated PR from Code Reviewer Agent with security and standards validation" --base main', "Create pull request", false)
+run_in_terminal('gh pr create --title "Code Review: Implementation Improvements" --body "Automated PR from Code Reviewer Agent with security and standards validation" --base main', "Create pull request", false)
 ```
 
 #### **User Request: "Full automated workflow"**
@@ -840,7 +840,7 @@ run_in_terminal("git add .", "Stage all approved changes", false)
 run_in_terminal('git commit -m "🚀 Automated Code Review: Enterprise Implementation
 
 Security Review: ✅ OWASP Top 10 compliant
-Standards Review: ✅ Employee project guidelines followed
+Standards Review: ✅ Project guidelines followed
 Quality Review: ✅ Enterprise-grade code quality
 
 Ready for production deployment!"', "Commit with comprehensive review", false)
