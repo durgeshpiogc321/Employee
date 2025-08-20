@@ -2,43 +2,43 @@
     ViewData["Title"] = "Employee List";
 }
 
-@section Styles{
+@section Styles {
     <style>
         table.dataTable.nowrap tbody td {
             white-space: normal;
         }
 
-            table.dataTable.nowrap tbody td:nth-child(2) {
-                min-width: 170px !important;
-            }
+        table.dataTable.nowrap tbody td:nth-child(2) {
+            min-width: 170px !important;
+        }
 
-            table.dataTable.nowrap tbody td:nth-child(3) {
-                min-width: 170px !important;
-            }
+        table.dataTable.nowrap tbody td:nth-child(3) {
+            min-width: 170px !important;
+        }
 
-            table.dataTable.nowrap tbody td:nth-child(4) {
-                min-width: 200px;
-            }
+        table.dataTable.nowrap tbody td:nth-child(4) {
+            min-width: 200px;
+        }
 
-            table.dataTable.nowrap tbody td:nth-child(5) {
-                min-width: 170px !important;
-            }
+        table.dataTable.nowrap tbody td:nth-child(5) {
+            min-width: 170px !important;
+        }
 
-            table.dataTable.nowrap tbody td:nth-child(6) {
-                min-width: 140px;
-            }
+        table.dataTable.nowrap tbody td:nth-child(6) {
+            min-width: 140px;
+        }
 
-            table.dataTable.nowrap tbody td:nth-child(7) {
-                min-width: 140px;
-            }
+        table.dataTable.nowrap tbody td:nth-child(7) {
+            min-width: 140px;
+        }
 
-            table.dataTable.nowrap tbody td:nth-child(8) {
-                min-width: 75px;
-            }
+        table.dataTable.nowrap tbody td:nth-child(8) {
+            min-width: 75px;
+        }
 
-            table.dataTable.nowrap tbody td:nth-child(9) {
-                min-width: 60px;
-            }
+        table.dataTable.nowrap tbody td:nth-child(9) {
+            min-width: 60px;
+        }
     </style>
 }
 
@@ -54,21 +54,25 @@
         <div class="row search-box">
             <div class="col-md-3 col-5 mb-3">
                 <div class="searchbar">
-                    <input id="search-keyword" type="text" class="form-control search-keyword" placeholder="Search here" autocomplete="off" maxlength="100" />
+                    <input id="search-keyword" type="text" class="form-control search-keyword" placeholder="Search here"
+                        autocomplete="off" maxlength="100" />
                 </div>
             </div>
             <div class="col-md-4 col-7 mb-3 px-0">
                 <div class="input-group">
-                    <input id="txtEmail" type="text" class="form-control col-9" placeholder="Email" autocomplete="off" />
+                    <input id="txtEmail" type="text" class="form-control col-9" placeholder="Email"
+                        autocomplete="off" />
                     <span class="input-group-glue"></span>
-                    <input id="txtPhone" type="text" class="form-control mx-2" placeholder="Phone Number" autocomplete="off" />
+                    <input id="txtPhone" type="text" class="form-control mx-2" placeholder="Phone Number"
+                        autocomplete="off" />
                 </div>
             </div>
             <div class="col-md-2 col-6 mb-3 px-md-0">
                 <div class="input-group">
                     <input id="btn-search" type="button" class="btn btn-primary" value="Search" />
                     <span class="input-group-glue mx-2"></span>
-                    <input id="btnClear" type="reset" class="btn btn-light border border-1" value="Clear" onclick="employee.ClearFilter()" />
+                    <input id="btnClear" type="reset" class="btn btn-light border border-1" value="Clear"
+                        onclick="employee.ClearFilter()" />
                 </div>
             </div>
             <div class="col-md-3 col-6 text-end mb-3">
@@ -97,7 +101,8 @@
 
 
 <div class="mvc-grid-popup mvc-grid-text-filter" style="display:none;">
-    <div class="popup-arrow" style="left: 19px;"></div><div class="popup-content">
+    <div class="popup-arrow" style="left: 19px;"></div>
+    <div class="popup-content">
         <div class="popup-filter">
         </div>
         <div class="popup-actions">
@@ -107,12 +112,14 @@
     </div>
 </div>
 
-<div class="modal fade" id="add-edit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="add-edit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modal-title"></h5>
-                <button type="button" class="border border-0" onclick="employee.CloseModal();">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    onclick="employee.CloseModal();">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -121,7 +128,7 @@
     </div>
 </div>
 
-@section Scripts{
+@section Scripts {
     <script src="~/customjs/common/table.js" asp-append-version="true"></script>
     <script src="~/customjs/employee/employee-index.js" asp-append-version="true"></script>
 }

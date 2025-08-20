@@ -95,7 +95,7 @@ var employee = {
         if (searchColumn.length == 0 && hdnSearchColumn.length > 0) {
             searchColumn = hdnSearchColumn;
             searchColumnValue = hdnSearchColumnValue;
-        }           
+        }
 
         let data = { email: $('#txtEmail').val(), phone: $('#txtPhone').val(), searchKeyword: $('#search-keyword').val(), searchColumn: searchColumn, searchColumnValue: searchColumnValue };
 
@@ -143,7 +143,7 @@ var employee = {
         let propText = $(_this).closest('th').text();
         let propName = $(_this).closest('th').data('name').toLowerCase();
 
-      
+
         if (propName.includes('dob') || propName.includes('createddate')) {
             $('.popup-filter').html('').html(`<div class="popup-group">
                 <input type="text" class="mvc-grid-value form-control datetime-picker" value="${propName == hdnSearchColumn ? hdnSearchColumnValue : ''}" data-filter="${propName}" placeholder="${propText}">
@@ -227,13 +227,20 @@ var employee = {
     },
 
     CloseModal: function () {
-        $('#add-edit-modal').modal('hide').find('#modal-body').html('');
+        $('#add-edit-modal').modal('hide');
+        $('#modal-body').html('');
+        // Remove any remaining backdrop
+        setTimeout(function () {
+            $('.modal-backdrop').remove();
+            $('body').removeClass('modal-open');
+        }, 300);
     },
 
     AddEdit: function () {
         toastr.remove();
         let fid = $('#frm-add-edit');
         if ($(fid).valid()) {
+            // Temporarily enable email field for form submission
             $('#Email').attr('disabled', false);
             var frmData = new FormData($(fid)[0]);
 
@@ -243,26 +250,28 @@ var employee = {
                 data: frmData,
                 processData: false,
                 contentType: false,
-                async: false,
+                async: true,
                 cache: false,
                 success: function (response) {
                     if (response.statusCode == 200) {
-                        //swal("Success!", response.message, "success");
                         toastr.success(response.message);
-                        employee.CloseModalAddEdit();
+                        employee.CloseModal();
                         setTimeout(function () {
                             employee.List();
                         }, 100);
                     }
                     else {
                         toastr.error(response.message);
+                        // Re-disable email field if there's an error
+                        $('#Email').attr('disabled', true);
                     }
                 },
                 error: function (response) {
                     toastr.error("Something went wrong");
+                    // Re-disable email field if there's an error
+                    $('#Email').attr('disabled', true);
                 }
             });
-            $('#Email').attr('disabled', true);
         }
     },
 
@@ -331,6 +340,9 @@ var employee = {
                         success: function (response) {
                             if (response.statusCode == 200) {
                                 toastr.success(response.message);
+                                setTimeout(function () {
+                                    employee.List();
+                                }, 500);
                             }
                             else {
                                 toastr.error(response.message);
